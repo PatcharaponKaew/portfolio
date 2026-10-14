@@ -1,0 +1,65 @@
+[
+  {
+    "id": "pv-fault",
+    "file": "pv-fault.png",
+    "type": "AI-generated conceptual demo",
+    "tool": "built-in imagegen",
+    "prompt": "Create one landscape 3:2 premium editorial demonstration image for a portfolio project card. A realistic solar photovoltaic array in angled perspective, blue-black panels, small monitoring sensor, soft late-afternoon light. Composition weighted to the right with quieter left space for a text overlay. Photorealistic conceptual illustration, sophisticated restrained color grading, crisp detail. No labels, no typography, no logos, no fabricated metrics. This is a conceptual demo, not documentary evidence of actual work."
+  },
+  {
+    "id": "insurtech",
+    "file": "insurtech.png",
+    "type": "AI-generated conceptual demo",
+    "tool": "built-in imagegen",
+    "prompt": "Create one landscape 3:2 premium editorial demonstration image for a portfolio project card. A premium generic smartphone with an abstract blue car insurance interface beside a small modern car, no brand, no readable text. Composition weighted to the right with quieter left space for a text overlay. Photorealistic conceptual illustration, sophisticated restrained color grading, crisp detail. No labels, no typography, no logos, no fabricated metrics. This is a conceptual demo, not documentary evidence of actual work."
+  },
+  {
+    "id": "coffee",
+    "file": "coffee.png",
+    "type": "AI-generated conceptual demo",
+    "tool": "built-in imagegen",
+    "prompt": "Create one landscape 3:2 premium editorial demonstration image for a portfolio project card. A solar-powered agricultural coffee drying tunnel, trays of coffee beans, translucent canopy and discreet solar panels, warm natural light. Composition weighted to the right with quieter left space for a text overlay. Photorealistic conceptual illustration, sophisticated restrained color grading, crisp detail. No labels, no typography, no logos, no fabricated metrics. This is a conceptual demo, not documentary evidence of actual work."
+  },
+  {
+    "id": "jobfinity",
+    "file": "jobfinity.png",
+    "type": "AI-generated conceptual demo",
+    "tool": "built-in imagegen",
+    "prompt": "Create one landscape 3:2 premium editorial demonstration image for a portfolio project card. A generic laptop showing an abstract job platform with a shield verification symbol, clean blue-white interface without readable text or branding. Composition weighted to the right with quieter left space for a text overlay. Photorealistic conceptual illustration, sophisticated restrained color grading, crisp detail. No labels, no typography, no logos, no fabricated metrics. This is a conceptual demo, not documentary evidence of actual work."
+  },
+  {
+    "id": "light-pipe",
+    "file": "light-pipe.png",
+    "type": "AI-generated conceptual demo",
+    "tool": "built-in imagegen",
+    "prompt": "Create one landscape 3:2 premium editorial demonstration image for a portfolio project card. A bright contemporary interior illuminated by ceiling daylight tubes, close view of a translucent recycled-plastic daylight pipe, elegant architectural photography. Composition weighted to the right with quieter left space for a text overlay. Photorealistic conceptual illustration, sophisticated restrained color grading, crisp detail. No labels, no typography, no logos, no fabricated metrics. This is a conceptual demo, not documentary evidence of actual work."
+  },
+  {
+    "id": "carbon-credit",
+    "file": "carbon-credit.png",
+    "type": "AI-generated conceptual demo",
+    "tool": "built-in imagegen",
+    "prompt": "Create one landscape 3:2 premium editorial demonstration image for a portfolio project card. Lush agricultural fields seen from above, subtle abstract carbon data visualization on a tablet in foreground, forest-green tones. Composition weighted to the right with quieter left space for a text overlay. Photorealistic conceptual illustration, sophisticated restrained color grading, crisp detail. No labels, no typography, no logos, no fabricated metrics. This is a conceptual demo, not documentary evidence of actual work."
+  },
+  {
+    "id": "beeeco",
+    "file": "beeeco.png",
+    "type": "AI-generated conceptual demo",
+    "tool": "built-in imagegen",
+    "prompt": "Create one landscape 3:2 premium editorial demonstration image for a portfolio project card. A beehive built from reused materials with honeycomb and bees, tactile wood and recycled material, warm amber editorial product photography. Composition weighted to the right with quieter left space for a text overlay. Photorealistic conceptual illustration, sophisticated restrained color grading, crisp detail. No labels, no typography, no logos, no fabricated metrics. This is a conceptual demo, not documentary evidence of actual work."
+  },
+  {
+    "id": "telesorting",
+    "file": "telesorting.png",
+    "type": "AI-generated conceptual demo",
+    "tool": "built-in imagegen",
+    "prompt": "Create one landscape 3:2 premium editorial demonstration image for a portfolio project card. An industrial sorting conveyor with small objects and a robotic actuator beside a generic factory-control tablet, realistic modern factory. Composition weighted to the right with quieter left space for a text overlay. Photorealistic conceptual illustration, sophisticated restrained color grading, crisp detail. No labels, no typography, no logos, no fabricated metrics. This is a conceptual demo, not documentary evidence of actual work."
+  },
+  {
+    "id": "floating-buoy",
+    "file": "floating-buoy.png",
+    "type": "AI-generated conceptual demo",
+    "tool": "built-in imagegen",
+    "prompt": "Create one landscape 3:2 premium editorial demonstration image for a portfolio project card. A compact scientific floating monitoring buoy on calm water, small sensor housing and antenna, soft blue-gray environmental research photography. Composition weighted to the right with quieter left space for a text overlay. Photorealistic conceptual illustration, sophisticated restrained color grading, crisp detail. No labels, no typography, no logos, no fabricated metrics. This is a conceptual demo, not documentary evidence of actual work."
+  }
+]

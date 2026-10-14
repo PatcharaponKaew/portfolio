@@ -1,65 +1,71 @@
-const highlights = [
-  {
-    value: "3.95 / 4.00",
-    label: "Academic Excellence",
-    detail: "Top of the Class",
-  },
-  {
-    value: "5 Countries",
-    label: "Global Experience",
-    detail: "Academic & Professional Exposure",
-  },
-  {
-    value: "20+",
-    label: "Awards & Recognitions",
-    detail: "Innovation • Leadership • Engineering",
-  },
-  {
-    value: "Real-World Impact",
-    label: "People • Community • Sustainability",
-    detail: "Solutions designed for practical use",
-  },
-];
+"use client";
+
+import { useEffect, useRef } from "react";
 
 export default function About() {
-  return (
-    <section id="about" className="about section-shell">
-      <div className="container">
-        <div className="section-kicker">01 — ABOUT ME</div>
-        <div className="about-grid">
-          <div className="about-story">
-            <h2>
-              From Engineering
-              <br />
-              to Business Impact.
-            </h2>
-            <div className="statement">
-              <p>
-                I started with engineering, where I learned to break down complex problems and turn ideas into practical solutions.
-              </p>
-              <p>
-                Through industry projects, innovation competitions, and international experiences, I discovered that I am most interested in problems where technology, business, and people come together.
-              </p>
-              <p>
-                I enjoy using data and analytical thinking to understand challenges, while considering customer needs and real-world feasibility.
-              </p>
-              <p>
-                My goal is to create solutions that not only work technically, but also deliver meaningful value to businesses, people, and society.
-              </p>
-            </div>
-          </div>
+  const sectionRef = useRef<HTMLElement>(null);
 
-          <div className="highlight-grid">
-            {highlights.map((item) => (
-              <article className="highlight-card" key={item.value}>
-                <strong>{item.value}</strong>
-                <h3>{item.label}</h3>
-                <p>{item.detail}</p>
-              </article>
-            ))}
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const lines = Array.from(section.querySelectorAll<HTMLElement>(".about-poem-line"));
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const top = section.getBoundingClientRect().top;
+      const viewport = window.innerHeight;
+      // Staggered scroll ranges drive a small upward overshoot, then settle.
+      // Reversing scroll retraces the same movement without time delays.
+      lines.forEach((line, index) => {
+        const progress = motion.matches ? 1 : Math.max(0, Math.min(1,
+          (viewport * .95 - top - index * viewport * .10) / (viewport * .58)
+        ));
+        const eased = progress * progress * (3 - 2 * progress);
+        const back = 1 + 2.2 * Math.pow(progress - 1, 3) + 1.2 * Math.pow(progress - 1, 2);
+        line.style.setProperty("--line-opacity", String(Math.min(1, eased * 2.5)));
+        line.style.setProperty("--line-rise", `${(1 - back) * 44}px`);
+      });
+    };
+    const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    motion.addEventListener("change", schedule);
+    update();
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+      motion.removeEventListener("change", schedule);
+    };
+  }, []);
+
+  return (
+    <section id="about" ref={sectionRef} className="about about-editorial section-shell" aria-label="About me" onCopy={event => event.preventDefault()}>
+      <div className="container about-editorial-content">
+        <p className="about-poem">
+          <span className="about-poem-line about-reveal"><span className="about-navy">Engineering</span> taught me to solve,</span>{" "}
+          <span className="about-poem-line about-reveal"><span className="about-navy">Experience</span> taught me to evolve.</span>{" "}
+          <span className="about-poem-line about-reveal">Now I bring ideas and people together,</span>{" "}
+          <span className="about-poem-line about-reveal"><span className="about-cobalt">to build solutions</span>{" "}<span className="about-navy">that make things better.</span></span>
+        </p>
+        <div className="about-signature about-reveal">
+          <div className="about-divider" aria-hidden="true" />
+          <div className="about-keywords-window">
+            <div className="about-keywords-track">
+              {[0, 1].map((copy) => (
+                <p className="about-keywords" key={copy} aria-hidden={copy === 1 ? true : undefined}>
+                  <span>ANALYTICAL THINKING</span><span aria-hidden="true">•</span>
+                  <span>INNOVATION</span><span aria-hidden="true">•</span>
+                  <span>HUMAN-CENTERED SOLUTIONS</span><span aria-hidden="true">•</span>
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
 }
+
+
